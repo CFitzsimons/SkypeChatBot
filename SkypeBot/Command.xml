@@ -1,0 +1,31 @@
+<CommandList>
+    <command>
+        <trigger>Hello</trigger>
+        <message>Hello yourself!</message>
+        <timer>3</timer>
+    </command>
+    <command>
+        <trigger>SuperTest</trigger>
+        <message></message>
+        <timer>1</timer>
+        <file>C:\\Users\\Colin\\Documents\\rolling.txt</file>
+    </command>
+    <command>
+        <trigger>Ping</trigger>
+        <message>Pong!</message>
+        <timer>5</timer>
+    </command>
+    <command>
+        <trigger>Beep</trigger>
+        <message>Boop</message>
+        <timer>2</timer>
+    </command>
+    <command>
+        <trigger>Lloyd</trigger>
+        <message>FUCK OFF LLOYD</message>
+    </command>
+    <command>
+        <trigger>Felipe</trigger>
+        <message>https://www.youtube.com/watch?v=ZthNYozVwNM</message>
+    </command>
+</CommandList>
