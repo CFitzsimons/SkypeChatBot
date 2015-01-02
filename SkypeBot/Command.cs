@@ -34,7 +34,7 @@ namespace SkypeBot
             {
                 //Lookup failed, don't handle.
             }
-            
+
         }
 
         public bool GetCommandFile(string path)
@@ -66,7 +66,7 @@ namespace SkypeBot
         {
             foreach (var cmd in lookup.Values)
             {
-                Console.WriteLine(String.Format("{0}, {1}",cmd.ID, cmd.Message));
+                Console.WriteLine(String.Format("{0}, {1}", cmd.ID, cmd.Message));
             }
         }
 
@@ -132,7 +132,7 @@ namespace SkypeBot
         private string filePath = null;
 
         protected CommandType type;
-        
+
         public string Message { private set; get; }
 
 
@@ -169,7 +169,7 @@ namespace SkypeBot
             }
             if (File.Exists(filePath) && (type == CommandType.Mixed || type == CommandType.File))
             {
-                Task t = new Task( () => 
+                Task t = new Task(() =>
                 {
                     foreach (var line in File.ReadAllLines(filePath))
                     {
@@ -180,16 +180,18 @@ namespace SkypeBot
                 t.Start();
             }
         }
-        protected enum CommandType{
+        protected enum CommandType
+        {
             File,
             Message,
             Mixed,
             None
         }
-        
+
     }
     public class RandomCommand : Command
     {
+        private static Random rand = new Random();
         public RandomCommand()
         {
             ID = Strings.RandomCommandID;
@@ -203,8 +205,7 @@ namespace SkypeBot
             {
                 int min = Int32.Parse(cmd.ArgList[0]);
                 int max = Int32.Parse(cmd.ArgList[1]);
-                Random rand = new Random();
-               place.SendMessage("Randomed: " + rand.Next(min, max));
+                place.SendMessage("Randomed: " + rand.Next(min, max + 1));
             }
             catch (Exception e)
             {
@@ -224,6 +225,6 @@ namespace SkypeBot
         }
 
 
-        
+
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
@@ -10,6 +11,7 @@ namespace SkypeBot
 {
     class Program
     {
+        public const int DELAY = 1000;
         static void Main(string[] args)
         {
             //Just a sample program that will grab 
@@ -26,6 +28,7 @@ namespace SkypeBot
             Console.WriteLine("Dump complete");
             while (true)
             {
+                Thread.Sleep(DELAY);
                 foreach (var test in sc.GetAllCommandMessages())
                 {
                     if (!String.IsNullOrEmpty(test.Key))
