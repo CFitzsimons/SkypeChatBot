@@ -52,7 +52,7 @@ Additional Commands
 !Timer X Message
 --------
 
-This will set a timer for X minutes, upon reaching X minutes past - a message will be displayed corrisponding to the message set.  For example:
+This will set a timer for X minutes, upon reaching X minutes past - a message will be displayed corresponding to the message set.  For example:
     !Timer 3 Hello World
 would display the message "Hello World" three minutes after the timer was set.  
 
